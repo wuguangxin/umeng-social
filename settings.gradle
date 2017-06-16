@@ -1,1 +1,1 @@
-include ':app', ':UmengSocial'
+include ':app', ':umeng-social'

@@ -15,5 +15,5 @@ Add it in your root build.gradle at the end of repositories:
 Step 2. Add the dependency
 
 	dependencies {
-	        compile 'com.github.wuguangxin:slidingmenu:1.0.0'
+	        compile 'com.github.wuguangxin:umeng-social:1.0.0'
 	}

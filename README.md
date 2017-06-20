@@ -7,13 +7,12 @@ Add it in your root build.gradle at the end of repositories:
 
 	allprojects {
 		repositories {
-			...
-			maven { url 'https://jitpack.io' }
+			jcenter()
 		}
 	}
   
 Step 2. Add the dependency
 
 	dependencies {
-	        compile 'com.github.wuguangxin:umeng-social:6.0.5'
+	        compile 'com.wuguangxin:umeng-social:1.0.0'
 	}

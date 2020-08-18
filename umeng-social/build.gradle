@@ -4,8 +4,8 @@ apply plugin: 'com.novoda.bintray-release' // bintray
 
 // module配置
 def mModulesName = "umeng-social"
-def mVersionCode = 2
-def mVersionName = "1.0.1"
+def mVersionCode = 130
+def mVersionName = "1.3.0"
 def mDescription = "优化"
 
 android {

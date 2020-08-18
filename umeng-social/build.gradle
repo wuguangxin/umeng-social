@@ -2,15 +2,21 @@ apply plugin: 'com.android.library'
 
 apply plugin: 'com.novoda.bintray-release' // bintray
 
+// module配置
+def mModulesName = "umeng-social"
+def mVersionCode = 2
+def mVersionName = "1.0.1"
+def mDescription = "优化"
+
 android {
-    compileSdkVersion 23
-    buildToolsVersion '25.0.0'
+    compileSdkVersion 29
+    buildToolsVersion '29.0.2'
 
     defaultConfig {
-        minSdkVersion 11
-        targetSdkVersion 23
-        versionCode 605
-        versionName "6.0.5"
+        minSdkVersion 14
+        targetSdkVersion 29
+        versionCode mVersionCode
+        versionName mVersionName
     }
 
     buildTypes {
@@ -30,34 +36,28 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:support-v4:18.0.0'
-    compile files('libs/SocialSDK_sms.jar')
-    compile files('libs/SocialSDK_umengqq.jar')
-    compile files('libs/SocialSDK_umengsina.jar')
-    compile files('libs/SocialSDK_umengwx.jar')
-    compile files('libs/umeng_social_api.jar')
-    compile files('libs/umeng_social_net.jar')
-    compile files('libs/umeng_social_view.jar')
-    compile files('libs/libammsdk.jar')
-    compile files('libs/mta-sdk-1.6.2.jar')
-    compile files('libs/open_sdk_r5756_lite.jar')
-    compile files('libs/SocialSDK_QQZone_3.jar')
-    compile files('libs/SocialSDK_Sina.jar')
-    compile files('libs/SocialSDK_WeiXin_2.jar')
-    compile files('libs/weiboSDKCore_3.1.4.jar')
+    implementation 'com.umeng.umsdk:common:2.2.5'
+    implementation  'com.umeng.umsdk:share-core:7.0.2'
+    implementation  'com.umeng.umsdk:share-board:7.0.2'
+
+    implementation  'com.umeng.umsdk:share-qq:7.0.2'
+    implementation  'com.umeng.umsdk:share-wx:7.0.2'
+    implementation  'com.umeng.umsdk:share-sina:7.0.2'
+    implementation  'com.umeng.umsdk:share-alipay:7.0.2'
+    implementation  'com.umeng.umsdk:share-dingding:7.0.2'
 }
 
 // 配置 bintray
 publish {
     // 固定配置
-    bintrayUser = 'wuguangxin'               // 登陆账号
-    groupId = 'com.wuguangxin'               // 项目的包名
-    userOrg = 'wuguangxin'                   // bintray用户名
-    repoName = 'maven'                       // Repositories名，所有library都默认使用"maven"
+    bintrayUser = 'wuguangxin'              // 登陆账号
+    groupId = 'com.wuguangxin'              // 项目的包名
+    userOrg = 'wuguangxin'                  // bintray用户名
+    repoName = 'maven'                      // Repositories名，所有library都默认使用"maven"
     // 可变配置
-    website = 'https://github.com/wuguangxin/umeng-social'   // 项目的地址，不重要
-    artifactId = 'umeng-social'                   // 上传到bintray里的Package Name(这里填什么就显示什么)
-    publishVersion ='1.0.0'                  // 引用版本号 (这里填什么就显示什么)
-    dryRun = false                           // false:上传，true：不上传
-    desc = '首次提交'                         // 描述，不重要
+    website = 'https://github.com/wuguangxin/' + mModulesName   // 项目的地址，不重要
+    artifactId = mModulesName               // 上传到bintray里的Package Name(这里填什么就显示什么)
+    publishVersion = mVersionName           // 引用版本号 (这里填什么就显示什么)
+    dryRun = false                          // false:上传，true：不上传
+    desc = mDescription                     // 版本描述（不重要）
 }

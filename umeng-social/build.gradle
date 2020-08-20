@@ -26,8 +26,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_7
-        targetCompatibility JavaVersion.VERSION_1_7
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
     lintOptions {
@@ -36,15 +36,15 @@ android {
 }
 
 dependencies {
-    implementation 'com.umeng.umsdk:common:2.2.5'
-    implementation  'com.umeng.umsdk:share-core:7.0.2'
-    implementation  'com.umeng.umsdk:share-board:7.0.2'
-
-    implementation  'com.umeng.umsdk:share-qq:7.0.2'
-    implementation  'com.umeng.umsdk:share-wx:7.0.2'
-    implementation  'com.umeng.umsdk:share-sina:7.0.2'
-    implementation  'com.umeng.umsdk:share-alipay:7.0.2'
-    implementation  'com.umeng.umsdk:share-dingding:7.0.2'
+    compile 'com.umeng.umsdk:common:9.1.0'
+    compile  'com.umeng.umsdk:share-core:7.0.2'
+    compile  'com.umeng.umsdk:share-board:7.0.2'
+    
+    compile  'com.umeng.umsdk:share-qq:7.0.2'
+    compile  'com.umeng.umsdk:share-wx:7.0.2'
+    compile  'com.umeng.umsdk:share-sina:7.0.2'
+    compile  'com.umeng.umsdk:share-alipay:7.0.2'
+    compile  'com.umeng.umsdk:share-dingding:7.0.2'
 }
 
 // 配置 bintray

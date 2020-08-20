@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.wuguangxin.demo.umengsocial"
-        minSdkVersion 14
+        minSdkVersion 16
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -17,6 +17,10 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
 //    lintOptions {
@@ -29,4 +33,20 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation 'com.android.support.constraint:constraint-layout:2.0.0-rc1'
+
+    compile project(":umeng-social")
+
+    implementation  'com.wuguangxin:utils:1.0.1' //
+
+    // 友盟统计SDK
+    // 下面各SDK根据宿主App是否使用相关业务按需引入。
+    // OAID目前为目前国内市场主流的Android Q设备标识，可根据需要选择。
+//    implementation  'com.umeng.umsdk:common:9.1.0' // (必选)
+//    implementation  'com.umeng.umsdk:asms:1.1.3' // asms包依赖(必选)
+//    implementation 'com.umeng.umsdk:crash:0.0.4' // native crash包依赖(必选)
+//    // implementation  'com.umeng.umsdk:game:9.1.0+G' // 游戏统计SDK依赖(可选)
+//    implementation  'com.umeng.umsdk:oaid_lenovo:1.0.0' // (可选)
+//    implementation  'com.umeng.umsdk:oaid_mi:1.0.0' // (可选)
+//    implementation  'com.umeng.umsdk:oaid_oppo:1.0.4' // (可选)
+//    implementation  'com.umeng.umsdk:oaid_vivo:1.0.0.1' // (可选)
 }
